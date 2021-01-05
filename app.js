@@ -3,7 +3,7 @@ dotenv.config({path: '.env'});
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 const passport = require('./api/passport');
 
