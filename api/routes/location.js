@@ -5,7 +5,7 @@ const router = express.Router();
 const LocationController = require('../controller/location');
 
 //POBRANIE LOKALIZACJI
-router.get('/',
+router.get('/:name',
     LocationController.get);
 
 //DODANIE LOKALIZACJI
