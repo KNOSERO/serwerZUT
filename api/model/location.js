@@ -10,7 +10,7 @@ const locationSchema = moongose.Schema({
     address: {
         type: String,
     },
-    fullname: {
+    fullName: {
         type: String,
     },
     where: {
