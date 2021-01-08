@@ -65,6 +65,18 @@ const ChatControler = {
         })
     },
 
+    /** AKTUALIZACJA NAZWY */
+    update: async (req, res, next) => {
+        await ChatModel.findOneAndUpdate({
+            _id: req.body.id,
+        }, {
+            lastRefersh: new Date(Date.now()),
+        });
+        res.status(200).json({
+            status: 0,
+        })
+    },
+
     /** RETURN CZAŁEGO CZATU */
     all: async (req, res, next) => {
         await ChatModel.find({

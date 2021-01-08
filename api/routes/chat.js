@@ -41,6 +41,7 @@ router.post('/group', iwtAuth,
     ChatControler.add);
 
 //POTWIERDZENIE PRZECZYTANIA -
-router.post('/read', iwtAuth, ChatControler.add);
+router.post('/read', iwtAuth, 
+    ChatControler.update);
 
 module.exports = router;
