@@ -1,5 +1,6 @@
 const dotenv = require('dotenv');
 dotenv.config({path: '.env'});
+process.env.TZ = 'Europe/Warsaw';
 
 const express = require('express');
 const bodyParser = require('body-parser');
