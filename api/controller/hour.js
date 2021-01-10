@@ -12,9 +12,9 @@ const HourController = {
          * @param {string} hour 
         */
         const mdate = (day, hour) => {
-            return moment(new Date(`${day[0]}${day[1]}${day[2]}${day[3]}`,
+            return moment(new Date(Date.UTC(`${day[0]}${day[1]}${day[2]}${day[3]}`,
                             parseInt(`${day[4]}${day[5]}`) - 1, `${day[6]}${day[7]}`,
-                            parseInt(`${hour[0]}${hour[1]}`), `${hour[3]}${hour[4]}`, 00), 'Europe/Warsaw')
+                            parseInt(`${hour[0]}${hour[1]}`), `${hour[3]}${hour[4]}`, 00)), 'Europe/Warsaw')
                             .format()
         };
 
