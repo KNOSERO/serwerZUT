@@ -1,0 +1,22 @@
+{
+    "location": [
+        {
+            "name": "WI WI1",
+            "fullName": "Wydział Informatyki ZUT - budynek 1",
+            "address": "Żołnierska 49, 71-210 Szczecin",
+            "where": {
+                "lat": 53.446963,
+                "lng": 14.4922442
+            }
+        },
+        {
+            "name": "WI WI2",
+            "fullName": "Wydział Informatyki ZUT - budynek 2",
+            "address": "Żołnierska 52, 71-210 Szczecin",
+            "where": {
+                "lat": 53.4484294,
+                "lng": 14.4911316
+            }
+        }
+    ]
+}

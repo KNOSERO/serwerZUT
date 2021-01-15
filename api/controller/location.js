@@ -1,15 +1,13 @@
 const LocationModel = require('../model/location');
+const fs = require('fs')
 
 const LocationController = {
 
     add: async (req, res, next) => {
 
-        const location = [
-            { name: 'WI WI1', fullName: 'Wydział Informatyki ZUT - budynek 1', address: 'Żołnierska 49, 71-210 Szczecin', where: { lat: 53.446963, lng: 14.4922442 } },
-            { name: 'WI WI2', fullName: 'Wydział Informatyki ZUT - budynek 2', address: 'Żołnierska 52, 71-210 Szczecin', where: { lat: 53.4484294, lng: 14.4911316 } },
-        ]
+        const location = await JSON.parse(fs.readFileSync("./api/json/faculty.json"))
 
-        location.map(async (el) => {
+        location.location.map(async (el) => {
             await LocationModel.findOneAndUpdate({
                 name: el.name,
             }, el, {
