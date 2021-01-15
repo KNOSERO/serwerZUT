@@ -50,7 +50,7 @@ const FacultyControler = {
             path: 'floor',
             match: { 'rooms.name': req.query.roomName }
         })
-            .then(result => res.status(200).json(result))
+            .then(result => res.status(200).json({floor: result}))
             .catch(() => res.status(201).json(null));
     },
 };
